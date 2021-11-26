@@ -1,12 +1,16 @@
-from django.contrib import admin
-from django.urls import path
-from .views import grafo
 
-app_name = 'grafo'
+from django.urls import path
+from .views import grafo,procesaGrafo
+from . import views
+
+
+#app_name = 'grafo'
 
 urlpatterns = [
 
-    path('',grafo,name="grafo"),
+    path('grafo/',grafo,name="grafo"),
+    path('procesarGrafo',procesaGrafo,name="procesaGrafo")
+
 
     
 ]
